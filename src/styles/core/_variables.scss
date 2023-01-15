@@ -1,0 +1,54 @@
+@use "sass:math";
+
+// Media Queries
+// ----------------------------------------------------------
+
+$mq: (
+  'sm-mobile': 320px,
+  'lg-mobile': 480px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1366px,
+  'infinity': 1440px
+);
+
+// Guide Colors
+// ----------------------------------------------------------
+
+$colors: (
+  'transparent': transparent,
+  'white': #fff,
+  'black': #000,
+  'davysGrey': #4D4D4D,
+  'pewterBlue': #81ADC8,
+  'aliceBlue': #EDF3F7,
+  'champagne': #F7EDE8,
+  'vermillion': #CD4631
+);
+
+// Functions
+// ----------------------------------------------------------
+
+@mixin mq($mq-value) {
+  @media (min-width: map-get($mq, $mq-value)) {
+    @content;
+  }
+}
+
+@function shadow($shadow-value) {
+  @return map-get($shadows, $shadow-value);
+}
+
+@function color($color-value) {
+  @return map-get($colors, $color-value);
+}
+
+@function rem($size) {
+  @return math.div($size, 10px) * 1rem;
+}
+
+// Default variables
+// ----------------------------------------------------------
+
+$base-font-size: 62.5%;
+$base-font: 'Montserrat Alternates', sans-serif;

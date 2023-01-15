@@ -1,0 +1,80 @@
+// Headlines
+@mixin headline-h1-xl($weight: 700, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(59.3px);
+  line-height: 100%;
+
+  @include mq('tablet') {
+    font-size: rem(96px);
+  }
+}
+
+@mixin headline-h1($weight: 700, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(36.65px);
+  line-height: 120%;
+
+  @include mq('tablet') {
+    font-size: rem(59.3px);
+  }
+}
+
+@mixin headline-h2($weight: 700, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(22.65px);
+  line-height: 140%;
+
+  @include mq('tablet') {
+    font-size: rem(36.65px);
+  }
+}
+
+@mixin headline-h3($weight: 500, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(16px);
+  line-height: 160%;
+
+  @include mq('tablet') {
+    font-size: rem(22.65px);
+  }
+}
+
+@mixin paragraph($weight: 500, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(14px);
+  line-height: 160%;
+
+  @include mq('tablet') {
+    font-size: rem(16px);
+  }
+}
+
+@mixin caption($weight: 500, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(12px);
+  line-height: 160%;
+
+  @include mq('tablet') {
+    font-size: rem(14px);
+  }
+}
+
+@mixin small($weight: 500, $font: $base-font) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: rem(12px);
+  line-height: 160%;
+}
